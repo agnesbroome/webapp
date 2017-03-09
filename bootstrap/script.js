@@ -9,19 +9,16 @@ getRandomID();
 
 
 $("#random").on("click", function getMovie() {
-    var movieID = getRandomID(Math.floor((Math.random() * 2155529) + 1), 7);
+    var movieID = getRandomID(Math.floor(Math.random()*900) + 100);
 console.log(movieID);
     $("#resultOmdb").show();
     $.ajax({
-        url: "http://www.omdbapi.com/?i=tt" + movieID + "&y=&plot=short&r=json",
+        url: "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=84257d453d689a1ebf94a3bd048f8e8e",
         dataType: "JSON",
         success: function(data){
-            $("#resultOmdb").append("<h3>" + data.Title + "</h3>" + "<h4>" + data.Year + "</h4>" + "<h4>" + data.Country + "</h4");
+            var date = new Date (data.release_date); 
+            $("#resultOmdb").append("<h3>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4");
             console.log(data);
         }
     })
 });
-
-
-
-
