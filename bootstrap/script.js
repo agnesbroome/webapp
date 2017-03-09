@@ -9,7 +9,6 @@ getRandomID();
 
 
 
-
 $("#random").on("click", function getMovie () {
     var movieID = getRandomID(Math.floor((Math.random() * 2155529) + 1), 7);
 console.log(movieID);
@@ -20,6 +19,7 @@ console.log(movieID);
         success: function(data){
             console.log(data);
         }
-    })
-});
-getMovie ();
+    });
+
+getMovie();
+
