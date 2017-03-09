@@ -277,7 +277,7 @@ ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
@@ -312,3 +312,5 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+
+
