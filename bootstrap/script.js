@@ -8,8 +8,6 @@ function getRandomID(number, length) {
 getRandomID();
 
 
-
-
 $("#random").on("click", function getMovie() {
     var movieID = getRandomID(Math.floor((Math.random() * 2155529) + 1), 7);
 console.log(movieID);
@@ -18,11 +16,12 @@ console.log(movieID);
         url: "http://www.omdbapi.com/?i=tt" + movieID + "&y=&plot=short&r=json",
         dataType: "JSON",
         success: function(data){
-            $("#resultOmdb").append("<h4>" + movieID + "</h4>");
+            $("#resultOmdb").append("<h3>" + data.Title + "</h3>" + "<h4>" + data.Year + "</h4>" + "<h4>" + data.Country + "</h4");
             console.log(data);
         }
     })
-    getMovie();
 });
+
+
 
 
