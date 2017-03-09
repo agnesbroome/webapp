@@ -7,11 +7,12 @@ function getRandomID(number, length) {
 }
 getRandomID();
 
-var movieID = getRandomID(Math.floor((Math.random() * 2155529) + 1), 7);
+
+
+
+$("#random").on("click", function getMovie () {
+    var movieID = getRandomID(Math.floor((Math.random() * 2155529) + 1), 7);
 console.log(movieID);
-
-
-function getMovie () {
     $("#resultOmdb").show();
     $.ajax({
         url: "http://www.omdbapi.com/?i=tt" + movieID + "&y=&plot=short&r=json",
@@ -20,4 +21,5 @@ function getMovie () {
             console.log(data);
         }
     })
-}
+});
+getMovie ();
