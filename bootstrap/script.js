@@ -10,7 +10,7 @@ getRandomID();
 
 $("#random").on("click", function getMovie() {
     var isSuccess = false;
-    while (!isSuccess){
+    //while (!isSuccess){
         var movieID = getRandomID(Math.floor(Math.random()*900) + 100);
     console.log(movieID);
         $("#resultOmdb").show();
@@ -21,11 +21,16 @@ $("#random").on("click", function getMovie() {
                 isSuccess = false;
             },
             success: function(data){
-                var date = new Date (data.release_date); 
+                var date = new Date (data.release_date);
                 $("#resultOmdb").append("<h3>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4");
                 console.log(data);
+                console.log('url:(https://image.tmdb.org/t/p/w640' + data['poster_path'] + ')');
+                $("#resultOmdb").append('<img src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');
+                $("#resultDiv").css('background', 'none');
+                $("#resultDiv").css('background', 'url:(' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + ') no-repeat center center scroll');
                 isSuccess = true;
             }
         });
-    }
+
+    //}
 });
