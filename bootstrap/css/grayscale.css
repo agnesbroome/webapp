@@ -241,7 +241,10 @@ a:focus {
 #posterMovie{
     width: 30%;
 }
-
+#placeText {
+    color: black;
+    font-size: 10px; 
+}
 #map {
   width: 100%;
   height: 200px;

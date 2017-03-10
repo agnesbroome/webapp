@@ -225,7 +225,7 @@ function createMarker(place){
     position: place.geometry.location
   });
   google.maps.event.addListener(marker, 'click', function(){
-    infowindow.setContent(place.name);
+    infowindow.setContent("<p id='placeText'>" + place.name + "</p>");
     infowindow.open(map, this);
   });
 }
