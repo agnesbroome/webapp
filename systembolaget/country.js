@@ -20,136 +20,155 @@
     "sv": "USA"
   },
   {
+    "eng": "United Kingdom",
     "id": "5",
-    "name": "Storbritannien"
+    "sv": "Storbritannien"
   },
   {
+    "eng": "Belgium",
     "id": "6",
-    "name": "Belgien"
+    "sv": "Belgien"
   },
 {
+    "eng": "The Netherlands",
     "id": "7",
-    "name": "Nederländerna"
+    "sv": "Nederländerna"
   },
   {
+    "eng": "Trinidag",
     "id": "8",
-    "name": "Trinidad"
+    "sv": "Trinidad"
   },
   {
+    "eng": "Switzerland",
     "id": "9",
-    "name": "Schweiz"
+    "sv": "Schweiz"
   },
   {
-    "id": "10",
-    "name": "Internationellt märke"
-  },
-  {
+    "eng": "Italy",
     "id": "11",
-    "name": "Italien"
+    "sv": "Italien"
   },
   {
+    "eng": "Mexico",
     "id": "12",
-    "name": "Mexiko"
+    "sv": "Mexiko"
   },
   {
+    "eng": "Denmark",
     "id": "13",
-    "name": "Danmark"
+    "sv": "Danmark"
   },
 {
+    "eng": "Chile",
     "id": "14",
-    "name": "Chile"
+    "sv": "Chile"
   },
   {
+    "eng": "Spain",
     "id": "15",
-    "name": "Spanien"
+    "sv": "Spanien"
   },
   {
+    "eng": "Austria",
     "id": "16",
-    "name": "Österrike"
+    "sv": "Österrike"
   },
   {
+    "eng": "Barbados",
     "id": "17",
-    "name": "Barbados"
+    "sv": "Barbados"
   },
   {
+    "eng": "Norway",
     "id": "18",
-    "name": "Norge"
+    "sv": "Norge"
   },
   {
+    "eng": "Japan",
     "id": "19",
-    "name": "Japan"
+    "sv": "Japan"
   },
-  {
-    "id": "20",
-    "name": "Förpackning"
-  },
-{
+ 
+ {
+    "eng": "Ireland",
     "id": "21",
-    "name": "Irland"
+    "sv": "Irland"
   },
   {
+    "eng": "Peru",
     "id": "22",
-    "name": "Peru"
+    "sv": "Peru"
   },
   {
+    "eng": "Finland",
     "id": "23",
-    "name": "Finland"
+    "sv": "Finland"
   },
   {
+    "eng": "Germany",
     "id": "24",
-    "name": "Tyskland"
+    "sv": "Tyskland"
   },
   {
+    "eng": "Australia",
     "id": "25",
-    "name": "Australien"
+    "sv": "Australien"
   },
   {
+    "eng": "Canada",
     "id": "26",
-    "name": "Kanada"
+    "sv": "Kanada"
   },
   {
+    "eng": "South Africa",
     "id": "27",
-    "name": "Sydafrika"
+    "sv": "Sydafrika"
   },
 {
+    "eng": "Czech Republic",
     "id": "28",
-    "name": "Tjeckien"
+    "sv": "Tjeckien"
   },
   {
+    "eng": "New Zealand",
     "id": "29",
-    "name": "Nya Zeeland"
+    "sv": "Nya Zeeland"
   },
   {
+    "eng": "Hungary",
     "id": "30",
-    "name": "Ungern"
+    "sv": "Ungern"
   },
   {
+    "eng": "Israel",
     "id": "31",
-    "name": "Israel"
+    "sv": "Israel"
   },
   {
+    "eng": "Portugal",
     "id": "32",
-    "name": "Portugal"
+    "sv": "Portugal"
   },
   {
+    "eng": "Colombia",
     "id": "33",
-    "name": "Colombia"
+    "sv": "Colombia"
   },
   {
+    "eng": "Greece",
     "id": "34",
-    "name": "Grekland"
-  },
-{
-    "id": "34",
-    "name": "Grekland"
+    "sv": "Grekland"
   },
   {
+    "eng": "Thailand",
     "id": "35",
-    "name": "Thailand"
+    "sv": "Thailand"
   },
   {
+    "eng": "Croatia",
     "id": "36",
-    "name": "Kroatien"
+    "sv": "Kroatien"
   },
   {
     "id": "37",
