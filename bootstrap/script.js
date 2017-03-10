@@ -13,7 +13,9 @@ $("#random").on("click", function getMovie() {
     //while (!isSuccess){
         var movieID = getRandomID(Math.floor(Math.random()*900) + 100);
     console.log(movieID);
+        $('#img').show();
         $("#resultOmdb").show();
+        
         $.ajax({
             url: "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=84257d453d689a1ebf94a3bd048f8e8e",
             dataType: "JSON",
@@ -21,6 +23,7 @@ $("#random").on("click", function getMovie() {
                 isSuccess = false;
             },
             success: function(data){
+                
                 $("#resultOmdb").html('');
                 var date = new Date (data.release_date);
                 $("#resultOmdb").append('<div id="movieDetails"></div>');
@@ -34,9 +37,31 @@ $("#random").on("click", function getMovie() {
                 $("#movieDetails").css("marginTop", "7%");
                 $("#resultDiv").css('background', 'none');
                 $("#resultDiv").css('background', 'url:(' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + ') no-repeat center center scroll');
+                $('#img').hide();
                 isSuccess = true;
+                
             }
         });
 
     //}
 });
+
+
+/*
+
+$body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }    
+});
+
+
+$("#random").click(function() {
+    $('.loading').fadeIn('fast');
+    var url = 'index_backend.php';
+    var data = 'type=scores';
+    $('#center').load(url, data, function() {
+      $('.loading').fadeOut('slow');
+    });
+});*/
