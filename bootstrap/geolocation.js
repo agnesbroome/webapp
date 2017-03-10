@@ -188,7 +188,8 @@ function getGroceries(position){
     zoom: 14,
     styles: greyscaleStyle
   });
-
+  
+    
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
@@ -196,6 +197,21 @@ function getGroceries(position){
     radius: 5000,
     type: ['liquor_store AND grocery_and_supermarket']
   }, callback);
+    
+ 
+    var icon = {
+         url: "img/original.png", // url
+         scaledSize: new google.maps.Size(80, 50), // size
+         origin: new google.maps.Point(0,0), // origin
+         anchor: new google.maps.Point(0,0) // anchor 
+     };
+  var currentMarker = new google.maps.Marker({
+      position: currentLocation,
+      map: map,
+      title: 'Position',
+      icon: icon
+  });
+
 }
 
 function callback(result, status){
@@ -217,6 +233,7 @@ function createMarker(place){
     infowindow.open(map, this);
   });
 }
+
 
 
 
