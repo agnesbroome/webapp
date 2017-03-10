@@ -29,7 +29,8 @@ $("#random").on("click", function getMovie() {
                 console.log('url:(https://image.tmdb.org/t/p/w640' + data['poster_path'] + ')');
                 $("#resultOmdb").prepend('<img id="posterMovie" src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');
                 $("#resultOmdb img").css("float", "left");
-                $("#movieDetails").css("float", "right");
+                $("#movieDetails").css("float", "left");
+                $("#movieDetails").css("marginLeft", "7%");
                 $("#resultDiv").css('background', 'none');
                 $("#resultDiv").css('background', 'url:(' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + ') no-repeat center center scroll');
                 isSuccess = true;
