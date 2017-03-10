@@ -330,4 +330,19 @@ body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
-
+#img {
+    display: none;
+    
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
