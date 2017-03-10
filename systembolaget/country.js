@@ -35,7 +35,7 @@
     "sv": "Nederländerna"
   },
   {
-    "eng": "Trinidag",
+    "eng": "Trinidad",
     "id": "8",
     "sv": "Trinidad"
   },
@@ -171,255 +171,297 @@
     "sv": "Kroatien"
   },
   {
+    "eng": "Turkey",
     "id": "37",
-    "name": "Turkiet"
+    "sv": "Turkiet"
   },
   {
+    "eng": "Jamaica",
     "id": "38",
-    "name": "Jamaica"
+    "sv": "Jamaica"
   },
   {
+    "eng": "Russia",
     "id": "39",
-    "name": "Ryssland"
+    "sv": "Ryssland"
   },
   {
+    "eng": "Argentina",
     "id": "40",
-    "name": "Argentina"
+    "sv": "Argentina"
   },
 {
+    "eng": "Slovakia",
     "id": "41",
-    "name": "Slovakien"
+    "sv": "Slovakien"
   },
   {
+    "eng": "Cyprus",
     "id": "42",
-    "name": "Cypern"
+    "sv": "Cypern"
   },
   {
-    "id": "43",
-    "name": "Övriga ursprung"
-  },
-  {
+    "eng": "Bulgaria",
     "id": "44",
-    "name": "Bulgarien"
+    "sv": "Bulgarien"
   },
   {
+    "eng": "Romania",
     "id": "45",
-    "name": "Rumänien"
+    "sv": "Rumänien"
   },
   {
+    "eng": "Cuba",  
     "id": "46",
-    "name": "Kuba"
+    "sv": "Kuba"
   },
   {
+    "eng": "Haiti",
     "id": "47",
-    "name": "Haiti"
+    "sv": "Haiti"
   },
 {
+    "eng": "Venezuela",
     "id": "48",
-    "name": "Venezuela"
+    "sv": "Venezuela"
   },
   {
+    "eng": "Dominican Republic",  
     "id": "49",
-    "name": "Dominikanska Republiken"
+    "sv": "Dominikanska Republiken"
   },
   {
+    "eng": "India",  
     "id": "50",
-    "name": "Indien"
+    "sv": "Indien"
   },
   {
+    "eng": "Guatemala",  
     "id": "51",
-    "name": "Guatemala"
+    "sv": "Guatemala"
   },
   {
+    "eng": "Indonesia",  
     "id": "52",
-    "name": "Indonesien"
+    "sv": "Indonesien"
   },
   {
+    "eng": "Panama",
     "id": "53",
-    "name": "Panama"
+    "sv": "Panama"
   },
   {
+    "eng": "Paraguay",
     "id": "54",
-    "name": "Paraguay"
+    "sv": "Paraguay"
   },
 {
+    "eng": "Guyana",
     "id": "55",
-    "name": "Guyana"
+    "sv": "Guyana"
   },
   {
-    "id": "56",
-    "name": "Varierande ursprung"
-  },
-  {
+    "eng": "Serbia",
     "id": "57",
-    "name": "Serbien"
+    "sv": "Serbien"
   },
   {
+    "eng": "Brazil",
     "id": "58",
-    "name": "Brasilien"
+    "sv": "Brasilien"
   },
   {
+    "eng": "Georgia",
     "id": "59",
-    "name": "Georgien"
+    "sv": "Georgien"
   },
   {
+    "eng": "Lebanon",
     "id": "60",
-    "name": "Libanon"
+    "sv": "Libanon"
   },
   {
+    "eng": "Bahamas",
     "id": "61",
-    "name": "Bahamas"
+    "sv": "Bahamas"
   },  
 {
+    "eng": "Slovenia",
     "id": "62",
-    "name": "Slovenien"
+    "sv": "Slovenien"
   },
   {
-    "id": "63",
-    "name": "Okänt ursprung"
-  },
-  {
+    "eng": "Namibia",
     "id": "64",
-    "name": "Namibia"
+    "sv": "Namibia"
   },
   {
+    "eng": "Macedonia (F.Y.R.O.M)",
     "id": "65",
-    "name": "Makedonien (F.Y.R.O.M)"
+    "sv": "Makedonien (F.Y.R.O.M)"
   },
   {
+    "eng": "Tunisia",
     "id": "66",
-    "name": "Tunisien"
+    "sv": "Tunisien"
   },
   { 
+    "eng": "Uruguay",
     "id": "67",
-    "name": "Uruguay"
+    "sv": "Uruguay"
   },
   {
+    "eng": "Montenegro",
     "id": "68",
-    "name": "Montenegro"
+    "sv": "Montenegro"
   },
   {
+    "eng": "South Korea",
     "id": "69",
-    "name": "Sydkorea"
+    "sv": "Sydkorea"
   },
   {
+    "eng": "Bosnia Herzegovina",
     "id": "70",
-    "name": "Bosnien-Hercegovina"
+    "sv": "Bosnien-Hercegovina"
   },
   {
+    "eng": "Luxemburg",
     "id": "71",
-    "name": "Luxemburg"
+    "sv": "Luxemburg"
   },
   {
+    "eng": "Malta",
     "id": "72",
-    "name": "Malta"
+    "sv": "Malta"
   },
   {
+    "eng": "Armenia",
     "id": "73",
-    "name": "Armenien"
+    "sv": "Armenien"
   },  
 {
+    "eng": "Moldavia",
     "id": "74",
-    "name": "Moldavien"
+    "sv": "Moldavien"
   },
   {
+    "eng": "Latvia",
     "id": "75",
-    "name": "Lettland"
+    "sv": "Lettland"
   },
   {
-    "id": "76",
-    "name": "St Lucia"
-  },
-  {
+    "eng": "Ukraine",
     "id": "77",
-    "name": "Ukraina"
+    "sv": "Ukraina"
   },
   {
+    "eng": "Iceland",
     "id": "78",
-    "name": "Island"
+    "sv": "Island"
   },
   {
+    "eng": "Grenada",
     "id": "79",
-    "name": "Grenada"
+    "sv": "Grenada"
   },
   {
+    "eng": "Philippines",
     "id": "80",
-    "name": "Filippinerna"
+    "sv": "Filippinerna"
   },
   {
+    "eng": "Surinam",
     "id": "81",
-    "name": "Surinam"
+    "sv": "Surinam"
   },
   {
+    "eng": "Lithuania",
     "id": "82",
-    "name": "Litauen"
+    "sv": "Litauen"
   },
   {
+    "eng": "Fiji",
     "id": "83",
-    "name": "Fiji"
+    "sv": "Fiji"
   },
   {
+    "eng": "Nicaragua",
     "id": "84",
-    "name": "Nicaragua"
+    "sv": "Nicaragua"
   },
   {
+    "eng": "Estonia",
     "id": "85",
-    "name": "Estland"
+    "sv": "Estland"
   },
   {
+    "eng": "Mauritius",
     "id": "86",
-    "name": "Mauritius"
+    "sv": "Mauritius"
   },
   {
+    "eng": "Costa Rica",
     "id": "87",
-    "name": "Costa Rica"
+    "sv": "Costa Rica"
   },  
-{
+  {
+    "eng": "Kosovo",
     "id": "88",
-    "name": "Kosovo"
+    "sv": "Kosovo"
   },
   {
+    "eng": "Singapore",
     "id": "89",
-    "name": "Singapore"
+    "sv": "Singapore"
   },
   {
+    "eng": "Marocco",
     "id": "90",
-    "name": "Marocko"
+    "sv": "Marocko"
   },
   {
+    "eng": "Kenya",
     "id": "91",
-    "name": "Kenya"
+    "sv": "Kenya"
   },
   {
+    "eng": "Uganda",
     "id": "92",
-    "name": "Uganda"
+    "sv": "Uganda"
   },
   {
+    "eng": "Vietnam",
     "id": "93",
-    "name": "Vietnam"
+    "sv": "Vietnam"
   },  
 {
     "id": "94",
     "name": "Nigeria"
   },
   {
+    "eng": "China",
     "id": "95",
-    "name": "Folkrepubliken Kina"
+    "sv": "Folkrepubliken Kina"
   },
   {
+    "eng": "Ethiopia",
     "id": "96",
-    "name": "Etiopien"
+    "sv": "Etiopien"
   },
   {
+    "eng": "Sri Lanka",
     "id": "97",
-    "name": "Sri Lanka"
+    "sv": "Sri Lanka"
   },
   {
+    "eng": "Togolese Republic",
     "id": "98",
-    "name": "Republiken Togo"
+    "sv": "Republiken Togo"
   },
   {
+    "eng": "Tanzania",
     "id": "99",
-    "name": "Tanzania"
+    "sv": "Tanzania"
   }
 ]
