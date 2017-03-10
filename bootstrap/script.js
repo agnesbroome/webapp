@@ -31,6 +31,7 @@ $("#random").on("click", function getMovie() {
                 $("#resultOmdb img").css("float", "left");
                 $("#movieDetails").css("float", "left");
                 $("#movieDetails").css("marginLeft", "7%");
+                $("#movieDetails").css("marginTop", "7%");
                 $("#resultDiv").css('background', 'none');
                 $("#resultDiv").css('background', 'url:(' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + ') no-repeat center center scroll');
                 isSuccess = true;
