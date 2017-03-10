@@ -47,21 +47,3 @@ $("#random").on("click", function getMovie() {
 });
 
 
-/*
-
-$body = $("body");
-
-$(document).on({
-    ajaxStart: function() { $body.addClass("loading");    },
-     ajaxStop: function() { $body.removeClass("loading"); }    
-});
-
-
-$("#random").click(function() {
-    $('.loading').fadeIn('fast');
-    var url = 'index_backend.php';
-    var data = 'type=scores';
-    $('#center').load(url, data, function() {
-      $('.loading').fadeOut('slow');
-    });
-});*/
