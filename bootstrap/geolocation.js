@@ -199,12 +199,8 @@ function getGroceries(position){
   }, callback);
     
  
-    var icon = {
-         url: "img/original.png", // url
-         scaledSize: new google.maps.Size(80, 50), // size
-         origin: new google.maps.Point(0,0), // origin
-         anchor: new google.maps.Point(0,0) // anchor 
-     };
+   
+  var icon = "img/original.png"
   var currentMarker = new google.maps.Marker({
       position: currentLocation,
       map: map,
