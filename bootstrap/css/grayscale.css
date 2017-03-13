@@ -308,7 +308,9 @@ body {
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
-    .navbar-custom {
+}
+@media (min-width: 768px) {
+  .navbar-custom {
     padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;
@@ -322,13 +324,14 @@ body {
     background: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
-    p {
+}
+@media (min-width: 768px) {
+  p {
     margin: 0 0 35px;
     font-size: 20px;
     line-height: 1.6;
   }
 }
-
 @media (min-width: 767px) {
   .content-section {
     padding-top: 250px;
