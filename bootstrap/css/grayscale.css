@@ -161,6 +161,11 @@ a:focus {
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
 }
+
+#marginCustom {
+    margin-left: 0px;
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -368,6 +373,7 @@ body {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 10%;
  }
     #movieDetails{
     width: 100%;
