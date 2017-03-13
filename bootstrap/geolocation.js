@@ -182,24 +182,31 @@ $(document).ready(function(){
 function getGroceries(position){
 
   var currentLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
-  
+
   map = new google.maps.Map(document.getElementById('map'), {
     center: currentLocation,
     zoom: 14,
-    styles: greyscaleStyle
+    styles: greyscaleStyle,
+    scrollwheel: false
   });
-  
-    
+
+
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: currentLocation,
     radius: 5000,
-    type: ['liquor_store AND grocery_and_supermarket']
+    type: ['convenience_store']
   }, callback);
-    
- 
-   
+
+  service.nearbySearch({
+    location: currentLocation,
+    radius: 5000,
+    type: ['liquor_store']
+  }, liquorStoreCallback);
+
+
+
   var icon = "img/original.png"
   var currentMarker = new google.maps.Marker({
       position: currentLocation,
@@ -218,6 +225,14 @@ function callback(result, status){
   }
 }
 
+function liquorStoreCallback(result, status){
+  if (status === google.maps.places.PlacesServiceStatus.OK){
+    for (var liquor = 0; liquor < result.length; liquor++){
+      createLiquorMarker(result[liquor]);
+    }
+  }
+}
+
 function createMarker(place){
   var placeLoc = place.geometry.location;
   marker = new google.maps.Marker({
@@ -230,7 +245,20 @@ function createMarker(place){
   });
 }
 
-
+//Liquor store markers
+function createLiquorMarker(place){
+  var placeLoc = place.geometry.location;
+  var image = 'https://lh4.ggpht.com/Tr5sntMif9qOPrKV_UVl7K8A_V3xQDgA7Sw_qweLUFlg76d_vGFA7q1xIKZ6IcmeGqg=w30';
+  marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+    icon: image
+  });
+  google.maps.event.addListener(marker, 'click', function(){
+    infowindow.setContent("<p id='placeText'>" + place.name + "</p>");
+    infowindow.open(map, this);
+  });
+}
 
 
 function showError(err){
