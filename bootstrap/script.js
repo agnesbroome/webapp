@@ -38,7 +38,7 @@ $("#random").on("click", function getMovie() {
                 if (data.title != data.original_title){
                     $("#movieDetails").append("<h3>" + data.title + "</h3>" + "<h3 id='originalTitle'> <small>" +  data.original_title + "</small> </h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4>" + "<p>" + data.overview + "</p>");}
                 else {
-                    $("#movieDetails").append("<h3>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4" + "<p>" + data.overview + "</p>");
+                    $("#movieDetails").append("<h3>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4>" + "<p>" + data.overview + "</p>");
                 }
                 console.log(data);
                 console.log('url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '")');
