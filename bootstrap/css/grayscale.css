@@ -38,13 +38,6 @@ p {
 p span {
     display: block;
 }
-@media (min-width: 768px) {
-  p {
-    margin: 0 0 35px;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-}
 a {
   color: #42DCA3;
   -webkit-transition: all 0.2s ease-in-out;
@@ -108,22 +101,6 @@ a:focus {
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
-@media (min-width: 768px) {
-  .navbar-custom {
-    padding: 20px 0;
-    border-bottom: none;
-    letter-spacing: 1px;
-    background: transparent;
-    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-  }
-  .navbar-custom.top-nav-collapse {
-    padding: 0;
-    background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-}
 .intro {
   display: table;
   width: 100%;
@@ -147,18 +124,6 @@ a:focus {
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
-}
-@media (min-width: 768px) {
-  .intro {
-    height: 100%;
-    padding: 0;
-  }
-  .intro .intro-body .brand-heading {
-    font-size: 60px;
-  }
-  .intro .intro-body .intro-text {
-    font-size: 26px;
-  }
 }
 .btn-circle {
   width: 70px;
@@ -259,21 +224,6 @@ a:focus {
   height: 200px;
   margin-top: 100px;
 }
-@media (min-width: 767px) {
-  .content-section {
-    padding-top: 250px;
-  }
-#download {
-    padding-top: 25px;
-    }
-.download-section {
-    padding: 100px 0;
-  }
-  #map #footer {
-    height: 400px;
-    margin-top: 250px;
-  }
-}
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -297,36 +247,6 @@ a:focus {
 }
 ul.banner-social-buttons {
   margin-top: 0;
-}
-@media (max-width: 1199px) {
-  ul.banner-social-buttons {
-    margin-top: 15px;
-  }
-}
-@media (max-width: 480px) {
-  ul.banner-social-buttons li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  ul.banner-social-buttons li:last-child {
-    margin-bottom: 0;
-  }
-    #posterMovie{
-    width: 30%;
- }
-    #movieDetails{
-    width: 60%;
- }
-    #movieDetails h3{
-    font-size: 3.0vw;
- }
-    #movieDetails h4{
-    font-size: 2.0vw;   
- }
-    #download {
-    padding-top: 25px;
-    }
 }
 footer {
   padding: 50px 0;
@@ -369,4 +289,84 @@ body {
     text-align:left;
     /* inline-block space fix */
     margin-right:-4px;
+}
+/* <-- Styling for desktop --> */
+@media (max-width: 1199px) {
+  ul.banner-social-buttons {
+    margin-top: 15px;
+  }
+}
+/* <-- Styling for tablet --> */
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 60px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+    .navbar-custom {
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+    p {
+    margin: 0 0 35px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 767px) {
+  .content-section {
+    padding-top: 250px;
+  }
+#download {
+    padding-top: 25px;
+    }
+.download-section {
+    padding: 100px 0;
+  }
+  #map #footer {
+    height: 400px;
+    margin-top: 250px;
+  }
+}
+/* <-- Styling for mobil --> */
+@media (max-width: 480px) {
+  ul.banner-social-buttons li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.banner-social-buttons li:last-child {
+    margin-bottom: 0;
+  }
+    #posterMovie{
+    width: 30%;
+ }
+    #movieDetails{
+    width: 60%;
+ }
+    #movieDetails h3{
+    font-size: 3.0vw;
+ }
+    #movieDetails h4{
+    font-size: 2.0vw;   
+ }
+    #download {
+    padding-top: 25px;
+    }
 }
