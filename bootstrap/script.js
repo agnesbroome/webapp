@@ -11,19 +11,21 @@ getRandomID();
 $("#random").on("click", function getMovie() {
     var isSuccess = false;
     //while (isSuccess == false){
-        var movieID = getRandomID(Math.floor(Math.random()*900) + 100);
-        console.log(movieID);
-        $('#img').show();
-        $("#resultOmdb").show();
+        
+        
+        function makeAjax(){
+            var movieID = getRandomID(Math.floor(Math.random()*900) + 100);
+            console.log(movieID);
+            $('#img').show();
+            $("#resultOmdb").show();
         
         $.ajax({
             url: "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=84257d453d689a1ebf94a3bd048f8e8e",
-            dataType: "JSON",
-            timeout: 2000, 
+            dataType: "JSON", 
             error: function(data){
-                
-                isSuccess = false;
-                $('#resultOmdb').html("dff");
+                setTimeout(function (){
+                    makeAjax();
+                }, 500)
             },
             
             
@@ -49,8 +51,9 @@ $("#random").on("click", function getMovie() {
                 
            
         });
-    
+    };
     //}
+    makeAjax();
 });
 
 
