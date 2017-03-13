@@ -27,7 +27,7 @@ $("#random").on("click", function getMovie() {
                 $("#resultOmdb").html('');
                 var date = new Date (data.release_date);
                 $("#resultOmdb").append('<div id="movieDetails"></div>');
-                $("#movieDetails").append("<h3 id='textFloat1'>" + data.original_title + "</h3>" + "<h4 id='textFloat2'>" + date.getFullYear() + "</h4>" + "<h4 id='textFloat3'>" + data.production_countries[0]["name"] + "</h4");
+                $("#movieDetails").append("<h3>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4");
                 console.log(data);
                 console.log('url:(https://image.tmdb.org/t/p/w640' + data['poster_path'] + ')');
                 $("#resultOmdb").prepend('<img id="posterMovie" src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');

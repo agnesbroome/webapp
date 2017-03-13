@@ -241,6 +241,15 @@ a:focus {
 #posterMovie{
     width: 30%;
 }
+#movieDetails{
+    width: 60%;
+}
+#movieDetails h3{
+    font-size: 4.0vw;
+}
+#movieDetails h4{
+    font-size: 2.5vw;   
+}
 #placeText {
     color: black;
     font-size: 10px; 
