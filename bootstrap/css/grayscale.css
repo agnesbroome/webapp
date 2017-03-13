@@ -312,6 +312,21 @@ ul.banner-social-buttons {
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
+    #posterMovie{
+    width: 30%;
+ }
+    #movieDetails{
+    width: 60%;
+ }
+    #movieDetails h3{
+    font-size: 3.0vw;
+ }
+    #movieDetails h4{
+    font-size: 2.0vw;   
+ }
+    #download {
+    padding-top: 25px;
+    }
 }
 footer {
   padding: 50px 0;
