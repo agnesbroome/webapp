@@ -161,11 +161,15 @@ a:focus {
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
 }
-
+#favoMovie{
+    margin-top: -4%;
+}
+.glyphicon{
+    margin-right: 2%;
+}
 #marginCustom {
     margin-left: 0px;
 }
-
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
