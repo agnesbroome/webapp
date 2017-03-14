@@ -1,10 +1,18 @@
+$(document).ready(function(){
+    var drink = localStorage.getItem('drinkList');
+    var movie = localStorage.getItem('movieList');
+    alert(movie);
+    alert(drink);
+})
 
 
 
 
 $("#save").on("click", ".saveB", function(data){
     var movieList = $("#originalTitle").text();
+    var drinkList = $("#drinkName").text();
     localStorage.setItem("movieList", movieList);
+    localStorage.setItem("drinkList", drinkList);
 });
 
 

@@ -519,6 +519,8 @@ function getRandomProduct(country){
       $("#marginCustom li").html('');
       $("#marginCustom li").append('<a href="systemet" class="btn btn-default btn-lg" target="_blank" id="bolagetLink"><i class=""></i> <span class="network-name">Systembolaget</span></a>');
       $("#bolagetLink").attr('href', 'https://www.systembolaget.se/' + data[random]['product_number']);
+      $("#save").html('');                
+      $("#save").append("<a class='saveB btn btn-default btn-lg' target='_blank'><span class='network-name'>SAVE </span> </a>");
       return data;
     }
   });

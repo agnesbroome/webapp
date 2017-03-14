@@ -44,8 +44,7 @@ $("#random").on("click", function getMovie() {
                     $("#movieDetails").append("<h3 id='originalTitle'>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4>" + "<p>" + data.overview + "</p>" );
 
                 }
-                $("#save").html('');
-                $("#save").append("<a class='saveB btn btn-default btn-lg' target='_blank'><span class='network-name'>SAVE </span> </a>");
+                
                 console.log(data);
                 //console.log('url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '")');
                 $("#resultOmdb").prepend('<img id="posterMovie" src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');
