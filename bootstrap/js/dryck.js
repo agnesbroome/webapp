@@ -501,7 +501,7 @@ function getRandomProduct(country){
     success: function(data){
       var random = randomInt(0, data.length);
       console.log(data[random]);
-        $("#drinkName").append('<h2>' + 'Thirsty?' + '</h2>');
+        $("#drinkHeading").css("display", "block");
         $("#drinkName").html(data[random]['name'] + ' <small> ' + data[random]['name_2'] + '</small>');
       var countryEng;
       for (x in countries){

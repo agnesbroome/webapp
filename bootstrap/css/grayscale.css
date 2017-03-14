@@ -167,7 +167,7 @@ a:focus {
 .glyphicon{
     margin-right: 2%;
 }
-#marginCustom {
+.marginCustom {
     margin-left: 0px;
 }
 @-webkit-keyframes pulse {
@@ -293,6 +293,9 @@ body {
 #img {
     display: none;
     
+}
+#drinkHeading {
+    display: none;
 }
 /* centered columns styles */
 .row-centered {
