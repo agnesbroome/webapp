@@ -501,7 +501,7 @@ function getRandomProduct(country){
     success: function(data){
       var random = randomInt(0, data.length);
       console.log(data[random]);
-      $("#drinkName").html(data[random]['name'] + ' <small> ' + data[random]['name_2'] + '</small>');
+      $("#drinkName").html('<h2>' + 'Thirsty?' + '</h2>' + data[random]['name'] + ' <small> ' + data[random]['name_2'] + '</small>');
       var countryEng;
       for (x in countries){
         if (countries[x]['sv'] == data[random]['country']['name']){
