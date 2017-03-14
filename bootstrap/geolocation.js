@@ -248,7 +248,7 @@ function createMarker(place){
 //Liquor store markers
 function createLiquorMarker(place){
   var placeLoc = place.geometry.location;
-  var image = 'https://lh4.ggpht.com/Tr5sntMif9qOPrKV_UVl7K8A_V3xQDgA7Sw_qweLUFlg76d_vGFA7q1xIKZ6IcmeGqg=w30';
+  var image = 'https://lh4.ggpht.com/Tr5sntMif9qOPrKV_UVl7K8A_V3xQDgA7Sw_qweLUFlg76d_vGFA7q1xIKZ6IcmeGqg=w50';
   marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
