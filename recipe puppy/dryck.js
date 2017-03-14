@@ -501,7 +501,7 @@ function getRandomProduct(country){
       console.log(data);
       var random = randomInt(0, data.length);
       console.log(data[random]);
-      $("#resultSB").append('<p>' + data[random]['name'] + '</p>');
+      //$("#resultSB").append('<p>' + data[random]['name'] + '</p>');
       var countryEng;
       for (x in countries){
         if (countries[x]['sv'] == data[random]['country']['name']){
@@ -514,10 +514,7 @@ function getRandomProduct(country){
   });
 }
 
-$("#random").mouseup(function(){
-  randomProduct = getRandomProduct(0);
-  console.log(randomProduct);
-});
+
 
 /*
 for (x in countries){

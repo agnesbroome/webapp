@@ -85,51 +85,51 @@
     <section id="download" class="content-section">
         <div class="download-section" id="resultDiv">
             <div class="container">
-                
+
                 <div class="row row-centered" id="img">
                     <div class="col-lg-1 col-centered">
                         <img src="img/ajax-loader-2.gif" >
                     </div>
-                    
+
                 </div>
                 <div id="marginCustom" class="col-lg-12 col-lg-offset-2">
 
-                    <div id="resultOmdb">  
-                     
+                    <div id="resultOmdb">
+
                     </div>
-                    
+
                 </div>
-                
+
             </div>
-            
+
         </div>
     </section>
      <!-- Wine Section -->
     <section id="wine" class="content-section">
         <div class="download-section" id="resultWine">
             <div class="container">
-                
+
                 <div class="row row-centered" id="img">
                     <div class="col-lg-1 col-centered">
                     </div>
-                    
+
                 </div>
                 <div id="marginCustom" class="col-lg-12 col-lg-offset-2">
-                    <h3>Wine name</h3>
-                    <h4>Country</h4>
-                    <h4>Price</h4>
+                    <h3 id="drinkName"></h3>
+                    <h4 id="drinkCountry"></h4>
+                    <h4 id="drinkPrice"></h4>
                     <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="systemet" class="btn btn-default btn-lg" target="_blank"><i class=""></i> <span class="network-name">Systembolaget</span></a>
+
                     </li>
                     </ul>
-                    <div id="resultSB">  
+                    <div id="resultSB">
                     </div>
-                    
+
                 </div>
             </div>
             </div>
-            
+
     </section>
     <!-- Map Section -->
     <div id="map"></div>
@@ -140,8 +140,8 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Movies Snacks Drinks</h2>
                 <p>This website is a school project for the course Cross-platform Applications with Web Technologies at Malmö University. </p>
-                
-                
+
+
                 <ul class="list-inline banner-social-buttons">
                     <li>
                         <a href="https://github.com/agnesbroome/webapp.git" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
@@ -171,7 +171,7 @@
                 </p>
                 <p><span>Agnes Broomé Clason</span> <a href="mailto:broomeagnes@gmail.com">broomeagnes@gmail.com</a>
                 </p>
-                
+
             </div>
         </div>
     </section>
@@ -186,10 +186,11 @@
             <p>Copyright &copy; Movies Snacks Drinks 2017</p>
         </div>
     </footer>
-    
-    
+
+
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -203,7 +204,15 @@
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
     <script src="script.js"></script>
+    <script src="js/dryck.js"></script>
+    <script>
+      //När film har laddats, gör request till systemet api
+      $(document).ajaxSuccess(function(){
+        countryId = convertEngToID(movieDrinkCountry);
+        getRandomProduct(countryId);
+      });
 
+    </script>
 </body>
 
 </html>

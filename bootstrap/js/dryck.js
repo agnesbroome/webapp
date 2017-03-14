@@ -492,16 +492,16 @@ function getRandomProduct(country){
 
   $.ajax({
     url: 'https://karlroos-systemet.p.mashape.com/product?alcohol_from=0&alcohol_to=1&country=' + country + '&limit=100&offset=0&order_by=price',
+    global: false,
     beforeSend: function(request){
       request.setRequestHeader("X-Mashape-Key", "tLl48RdhVxmshod4XUrdqoE3VJR5p1znYAkjsnvJ3UHwelmDuc");
       request.setRequestHeader("Accept", "application/json");
       //header('X-Mashape-Key', 'tLl48RdhVxmshod4XUrdqoE3VJR5p1znYAkjsnvJ3UHwelmDuc')
     },
     success: function(data){
-      console.log(data);
       var random = randomInt(0, data.length);
       console.log(data[random]);
-      $("#resultSB").append('<p>' + data[random]['name'] + '</p>');
+      $("#drinkName").html(data[random]['name'] + ' <small> ' + data[random]['name_2'] + '</small>');
       var countryEng;
       for (x in countries){
         if (countries[x]['sv'] == data[random]['country']['name']){
@@ -509,15 +509,28 @@ function getRandomProduct(country){
           break;
         }
       }
+      if(data[random]['tags'].length != 0){
+        $("#drinkCountry").html(data[random]['tags'][0]['name'] + ' <small>from</small> ' + countryEng);
+      }
+      else{
+        $("#drinkCountry").html(countryEng);
+      }
+      $("#drinkPrice").html(data[random]['price'].toFixed(2) + 'kr');
+      $("#marginCustom li").html('');
+      $("#marginCustom li").append('<a href="systemet" class="btn btn-default btn-lg" target="_blank" id="bolagetLink"><i class=""></i> <span class="network-name">Systembolaget</span></a>');
+      $("#bolagetLink").attr('href', 'https://www.systembolaget.se/' + data[random]['product_number']);
       return data;
     }
   });
 }
 
-$("#random").mouseup(function(){
-  randomProduct = getRandomProduct(0);
-  console.log(randomProduct);
-});
+function convertEngToID(eng){
+  for (x in countries){
+    if(eng == countries[x]['eng']){
+      return countries[x]['id'];
+    }
+  }
+}
 
 /*
 for (x in countries){
