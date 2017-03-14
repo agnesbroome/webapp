@@ -1,18 +1,64 @@
 $(document).ready(function(){
     var drink = localStorage.getItem('drinkList');
-    var movie = localStorage.getItem('movieList');
-    
-})
-
-
-
+    var movie = localStorage.getItem('movieList'); 
+});
 
 $("#save").on("click", ".saveB", function(data){
     var movieList = $("#originalTitle").text();
     var drinkList = $("#drinkName").text();
     localStorage.setItem("movieList", movieList);
     localStorage.setItem("drinkList", drinkList);
+    var testObject = { "movieList": movieList, "drinkList": drinkList  };
+console.log('typeof testObject: ' + typeof testObject);
+console.log('testObject properties:');
+for (var prop in testObject) {
+    console.log('  ' + prop + ': ' + testObject[prop]);
+}
+    
+    
+    for(var i in localStorage)
+{
+    
+    console.log(localStorage[i]);
+    
+    
+}
 });
+
+
+
+
+
+/*
+var searches = [
+    {
+        'movie': 'bla',
+        'drink': 'bla'
+    }
+];
+
+var newsearch = {
+    'movie': 'böa',
+    'drink': 'bla'
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
