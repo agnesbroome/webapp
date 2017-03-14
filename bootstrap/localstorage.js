@@ -1,8 +1,7 @@
 $(document).ready(function(){
     var drink = localStorage.getItem('drinkList');
     var movie = localStorage.getItem('movieList');
-    alert(movie);
-    alert(drink);
+    
 })
 
 
