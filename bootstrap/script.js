@@ -40,14 +40,15 @@ $("#random").on("click", function getMovie() {
                 else {
                     $("#movieDetails").append("<h3>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4>" + "<p>" + data.overview + "</p>" );
                 }
-                $("#saveB").html('');
-                $("#saveB").append("<a href='' class='btn btn-default btn-lg' target='_blank'>" + "<span class='network-name'> Save </span>" + "</a>")
+                $("#save").html('');
+                $("#save").append("<a href='' class='btn btn-default btn-lg' target='_blank' id='saveB'>" + "<span class='network-name'> Save </span>" + "</a>")
                 console.log(data);
                 console.log('url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '")');
                 $("#resultOmdb").prepend('<img id="posterMovie" src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');
                 $("#resultDiv").css('background', 'none');
                 $("#resultDiv").css('background', 'url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '") no-repeat center center scroll');
                 $('#img').hide();
+                console.log(data.title);
                 isSuccess = true;
             }
 
