@@ -4,7 +4,13 @@ $(document).ready(function(){
 });
 
 if(localStorage.getItem('searches')){
-    $("#favoP").html(localStorage.getItem('searches'));
+    jsonlist = JSON.parse(localStorage.getItem('searches'));
+    $("#favoP").html('');
+    for(x in jsonlist){
+        $("#favoP").append('<h4> ' + '<span class="glyphicon glyphicon-film"></span>' + jsonlist[x]['movie'] + '</h4>');
+        $("#favoP").append('<p id="favoMovie"> ' + '<span class="glyphicon glyphicon-glass"></span>' + jsonlist[x]['drink'] + '</p>');
+    }
+    
 
 } else{
     $("#favoP").append("No favorites saved.....");
