@@ -13,7 +13,7 @@ if(localStorage.getItem('searches')){
     
 
 } else{
-    $("#favoP").append("No favorites saved.....");
+    $("#favoP").append("You haven't saved any favorites yet");
 }
 
 
