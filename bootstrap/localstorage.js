@@ -1,29 +1,63 @@
 $(document).ready(function(){
-    var drink = localStorage.getItem('drinkList');
-    var movie = localStorage.getItem('movieList'); 
+    var drink = localStorage.getItem('drink');
+    var movie = localStorage.getItem('movie'); 
 });
 
-$("#save").on("click", ".saveB", function(data){
-    var movieList = $("#originalTitle").text();
-    var drinkList = $("#drinkName").text();
-    localStorage.setItem("movieList", movieList);
-    localStorage.setItem("drinkList", drinkList);
-    var testObject = { "movieList": movieList, "drinkList": drinkList  };
-console.log('typeof testObject: ' + typeof testObject);
-console.log('testObject properties:');
-for (var prop in testObject) {
-    console.log('  ' + prop + ': ' + testObject[prop]);
+if(localStorage.getItem('searches')){
+    $("#favoP").html(localStorage.getItem('searches'));
+
+} else{
+    $("#favoP").append("No favorites saved.....");
 }
+
+
+$("#save").on("click", ".saveB", function(data){
+    var movie = $("#originalTitle").text();
+    var drink = $("#drinkName").text();
+    //localStorage.setItem("movie", movie);
+    //localStorage.setItem("drink", drink);
+    var oldSearch = localStorage.getItem('searches');
+    var savedSearch = JSON.parse(oldSearch);
+    if (savedSearch == null){
+        savedSearch = [];
+        
+    }
+    console.log(savedSearch);
+    var search = {
+        'movie': movie,
+        'drink': drink
+    }
+    savedSearch.push(search);
+    console.log(savedSearch);
+    savedSearch = JSON.stringify(savedSearch);
+    localStorage.setItem('searches', savedSearch);
+});
     
+$(document).on('click', '.saveB', function(){
+    jsonlist = JSON.parse(localStorage.getItem('searches'));
+    $("#favoP").html('');
+    for(x in jsonlist){
+        $("#favoP").append('<h4> ' + '<span class="glyphicon glyphicon-film"></span>' + jsonlist[x]['movie'] + '</h4>');
+        $("#favoP").append('<p id="favoMovie"> ' + '<span class="glyphicon glyphicon-glass"></span>' + jsonlist[x]['drink'] + '</p>');
+    }
     
-    for(var i in localStorage)
+})
+
+//console.log(Object.keys('searches'));
+//var months = ['Jan', 'Feb', 'Mar', 'Apr'];
+//months.toString(); // "Jan,Feb,Mar,Apr"
+
+
+
+
+   /* for(var i in localStorage)
 {
     
     console.log(localStorage[i]);
     
     
-}
-});
+};
+});*/
 
 
 
