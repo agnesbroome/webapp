@@ -30,22 +30,21 @@ $(document).on('click', '.saveB', function(){
    
     var movie = $("#originalTitle").text();
     var drink = $("#drinkName").text();
-    //localStorage.setItem("movie", movie);
-    //localStorage.setItem("drink", drink);
+    
     var oldSearch = localStorage.getItem('searches');
     var savedSearch = JSON.parse(oldSearch);
     if (savedSearch == null){
         savedSearch = [];
         
     }
-    console.log(savedSearch);
+    
     var search = {
         'movie': movie,
         'drink': drink
     }
     
     savedSearch.push(search);
-    console.log(savedSearch);
+    
     savedSearch = JSON.stringify(savedSearch);
     localStorage.setItem('searches', savedSearch);  
      jsonlist = JSON.parse(localStorage.getItem('searches'));

@@ -1,19 +1,4 @@
-//https://karlroos-systemet.p.mashape.com/product?alcohol_from=0.4&alcohol_to=0.48&country=1&limit=1&offset=0&order_by=price
 
-//$("#resultSB")
-
-/*
-$.ajax({
-  url: 'https://karlroos-systemet.p.mashape.com/product?alcohol_from=0.4&alcohol_to=0.48&country=1&limit=30&offset=0&order_by=price',
-  beforeSend: function(request){
-    request.setRequestHeader("X-Mashape-Key", "tLl48RdhVxmshod4XUrdqoE3VJR5p1znYAkjsnvJ3UHwelmDuc");
-    request.setRequestHeader("Accept", "application/json");
-    //header('X-Mashape-Key', 'tLl48RdhVxmshod4XUrdqoE3VJR5p1znYAkjsnvJ3UHwelmDuc')
-  },
-  success: function(data){
-    console.log(data);
-  }
-})*/
 
 var countries = [
   {
@@ -496,11 +481,11 @@ function getRandomProduct(country){
     beforeSend: function(request){
       request.setRequestHeader("X-Mashape-Key", "tLl48RdhVxmshod4XUrdqoE3VJR5p1znYAkjsnvJ3UHwelmDuc");
       request.setRequestHeader("Accept", "application/json");
-      //header('X-Mashape-Key', 'tLl48RdhVxmshod4XUrdqoE3VJR5p1znYAkjsnvJ3UHwelmDuc')
+      
     },
     success: function(data){
       var random = randomInt(0, data.length);
-      console.log(data[random]);
+     
         $("#drinkHeading").css("display", "block");
         $("#drinkName").html(data[random]['name'] + ' <small> ' + data[random]['name_2'] + '</small>');
       var countryEng;
@@ -533,11 +518,3 @@ function convertEngToID(eng){
     }
   }
 }
-
-/*
-for (x in countries){
-  if(randomNum == countries[x]['eng']){
-    chosenC = countries[x]['id'];
-  }
-}*/
-//getRandomProduct(chosenC);
