@@ -1,3 +1,4 @@
+var saved = false;
 $(document).ready(function() {
 	var drink = localStorage.getItem('drink');
 	var movie = localStorage.getItem('movie');
@@ -16,6 +17,10 @@ if (localStorage.getItem('searches')) {
 }
 $("#save").on("click", ".saveB", function(data) {});
 $(document).on('click', '.saveB', function() {
+    if (saved){
+        alert("The movie is already in your list of favorites!");
+        return;
+    }
 	var movie = $("#originalTitle").text();
 	var drink = $("#drinkName").text();
 	var oldSearch = localStorage.getItem('searches');
@@ -27,6 +32,7 @@ $(document).on('click', '.saveB', function() {
 		'movie': movie,
 		'drink': drink
 	}
+    
 	savedSearch.push(search);
 	savedSearch = JSON.stringify(savedSearch);
 	localStorage.setItem('searches', savedSearch);
@@ -38,6 +44,7 @@ $(document).on('click', '.saveB', function() {
 	}
 	$("#del").html('');
 	$("#del").append("<a class='deleteB btn btn-default btn-lg' target='_blank'><span class='network-name'>CLEAR FAVORITES</span></a>");
+    saved = true;
 })
 $("#del").on("click", ".deleteB", function() {
 	$(document).on('click', '.deleteB', function() {

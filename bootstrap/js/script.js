@@ -9,6 +9,7 @@ function getRandomID(number, length) {
 }
 getRandomID();
 $("#random").on("click", function getMovie() {
+    saved = false;
 	var isSuccess = false;
 
 	function makeAjax() {
