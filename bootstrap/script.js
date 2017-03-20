@@ -18,7 +18,7 @@ $("#random").on("click", function getMovie() {
         function makeAjax(){
             var movieID = getRandomID(Math.floor(Math.random()*900) + 100);
            
-            $('#img').show();
+            $('.img').show();
             $("#resultOmdb").show();
 
         $.ajax({
@@ -52,7 +52,7 @@ $("#random").on("click", function getMovie() {
                 $("#resultOmdb").prepend('<img id="posterMovie" src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');
                 $("#resultDiv").css('background', 'none');
                 $("#resultDiv").css('background', 'url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '") no-repeat center center scroll');
-                $('#img').hide();
+                $('.img').hide();
                 isSuccess = true;
             }
 
