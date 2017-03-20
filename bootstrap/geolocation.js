@@ -1,3 +1,6 @@
+/*
+  Styling för vår karta
+*/
 var greyscaleStyle = [
     {
         "featureType": "all",
@@ -168,6 +171,9 @@ var greyscaleStyle = [
 
 var map, infowindow;
 
+/*
+  Fråga användaren efter tillåtelse att använda Geolocation
+*/
 $(document).ready(function(){
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(getGroceries, showError,{
@@ -179,6 +185,9 @@ $(document).ready(function(){
   }
 });
 
+/*
+  Skapa kartan, leta efter butiker och lägg till ikon för nuvarande position
+*/
 function getGroceries(position){
 
   var currentLocation = {lat: position.coords.latitude, lng: position.coords.longitude};
@@ -193,12 +202,14 @@ function getGroceries(position){
 
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
+  //Leta efter närbutiker
   service.nearbySearch({
     location: currentLocation,
     radius: 5000,
     type: ['convenience_store']
   }, callback);
 
+  //Leta efter systembolaget
   service.nearbySearch({
     location: currentLocation,
     radius: 5000,
@@ -206,7 +217,7 @@ function getGroceries(position){
   }, liquorStoreCallback);
 
 
-
+  //Skapa en marker för vår nuvarande position
   var icon = "img/original.png"
   var currentMarker = new google.maps.Marker({
       position: currentLocation,
@@ -216,7 +227,9 @@ function getGroceries(position){
   });
 
 }
-
+/*
+  Skapa markers för varje butik man hittar
+*/
 function callback(result, status){
   if (status === google.maps.places.PlacesServiceStatus.OK){
     for (var store = 0; store < result.length; store++){
@@ -225,6 +238,9 @@ function callback(result, status){
   }
 }
 
+/*
+  Skapa markers för varje liquor store man hittar
+*/
 function liquorStoreCallback(result, status){
   if (status === google.maps.places.PlacesServiceStatus.OK){
     for (var liquor = 0; liquor < result.length; liquor++){
@@ -232,7 +248,9 @@ function liquorStoreCallback(result, status){
     }
   }
 }
-
+/*
+  Skapa markör från platsinformation
+*/
 function createMarker(place){
   var placeLoc = place.geometry.location;
   marker = new google.maps.Marker({
@@ -260,7 +278,9 @@ function createLiquorMarker(place){
   });
 }
 
-
+/*
+  Ifall användaren nekar
+*/
 function showError(err){
-  $("#test").html("Går ej!");
+  return;
 }
