@@ -46,8 +46,7 @@ $("#random").on("click", function getMovie() {
                 }
                 $("#movieDetails").append('<ul class="list-inline banner-social-buttons"><a class="page-scroll" href="#favorite"><li id="save"></li></a></ul>');
                 $("#save").html('');
-              $("#save").append("<a class='saveB btn btn-default btn-lg' target='_blank'><span class='network-name'>SAVE FOR LATER</span> </a>");
-                
+                $("#save").append("<a class='saveB btn btn-default btn-lg' target='_blank'><span class='network-name'>SAVE FOR LATER</span> </a>");
                 console.log(data);
                 //console.log('url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '")');
                 $("#resultOmdb").prepend('<img id="posterMovie" src="' + 'https://image.tmdb.org/t/p/w640' + data['poster_path'] + '">');
@@ -64,6 +63,7 @@ $("#random").on("click", function getMovie() {
     makeAjax();
 });
 $(document).ready(function(){
+    
      $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
                 $('#back-to-top').fadeIn();
@@ -82,4 +82,10 @@ $(document).ready(function(){
         
         $('#back-to-top').tooltip('show');
 
+});
+
+$(document).ready(function(){
+    window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
 });
