@@ -519,6 +519,8 @@ function getRandomProduct(country){
       $("#drinkPrice").html(data[random]['price'].toFixed(2) + 'kr');
       $("#systemetLinkUL").css('display', 'block');
       $("#bolagetLink").attr('href', 'https://www.systembolaget.se/' + data[random]['product_number']);
+      $("#mapHeading").css("display", "block");
+
       
     }
   });

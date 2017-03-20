@@ -308,9 +308,11 @@ body {
 #drinkHeading {
     display: none;
 }
+
 #mapHeading {
     display: none;
-    margin-top: 10px;
+    padding: 0px;
+    text-align: center;
 }
 /* centered columns styles */
 .row-centered {
@@ -373,7 +375,9 @@ body {
 #download {
     padding-top: 25px;
     }
-
+.download-section {
+    padding: 7% 0;
+  }
   #map #footer {
     height: 400px;
     margin-top: 250px;
