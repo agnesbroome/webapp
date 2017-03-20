@@ -192,7 +192,7 @@ function createMarker(place) {
 		position: place.geometry.location
 	});
 	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.setContent("<p id='placeText'>" + place.name + "</p>");
+		infowindow.setContent("<p id='placeText'>" + place.name + "</p>" + "<p id='placeText'>" + place.vicinity + "</p>");
 		infowindow.open(map, this);
 	});
 }
@@ -206,7 +206,7 @@ function createLiquorMarker(place) {
 		icon: image
 	});
 	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.setContent("<p id='placeText'>" + place.name + "</p>");
+		infowindow.setContent("<p id='placeText'>" + place.name + "</p>" + "<p id='placeText'>" + place.vicinity + "</p>");
 		infowindow.open(map, this);
 	});
 }
