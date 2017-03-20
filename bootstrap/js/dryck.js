@@ -517,12 +517,9 @@ function getRandomProduct(country){
         $("#drinkCountry").html(countryEng);
       }
       $("#drinkPrice").html(data[random]['price'].toFixed(2) + 'kr');
-      $(".marginCustom li").html('');
-      $(".marginCustom li").append('<a href="systemet" class="btn btn-default btn-lg" target="_blank" id="bolagetLink"><i class=""></i> <span class="network-name">Systembolaget</span></a>');
+      $("#systemetLinkUL").css('display', 'block');
       $("#bolagetLink").attr('href', 'https://www.systembolaget.se/' + data[random]['product_number']);
-      $("#save").html('');
-      $("#save").append("<a class='saveB btn btn-default btn-lg' target='_blank'><span class='network-name'>SAVE FOR LATER</span> </a>");
-      return data;
+      
     }
   });
 }

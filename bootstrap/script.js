@@ -44,6 +44,9 @@ $("#random").on("click", function getMovie() {
                     $("#movieDetails").append("<h3 id='originalTitle'>" + data.original_title + "</h3>" + "<h4>" + date.getFullYear() + "</h4>" + "<h4>" + data.production_countries[0]["name"] + "</h4>" + "<p>" + data.overview + "</p>" );
 
                 }
+                $("#movieDetails").append('<ul class="list-inline banner-social-buttons"><a class="page-scroll" href="#favorite"><li id="save"></li></a></ul>');
+                $("#save").html('');
+              $("#save").append("<a class='saveB btn btn-default btn-lg' target='_blank'><span class='network-name'>SAVE FOR LATER</span> </a>");
                 
                 console.log(data);
                 //console.log('url:("https://image.tmdb.org/t/p/w640' + data['poster_path'] + '")');
